@@ -1,0 +1,51 @@
+
+
+.addware  {
+  height: 19cm;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  background-image: url(/src/assets/images/pexels-kaique-rocha-379964.jpg);
+
+}
+.addware1{
+  margin-top: 4cm;
+  margin-left: 12cm;
+  align-content: center;
+  font-size: large;
+  text-align: center;
+  background-color: white;
+  width: 15cm;
+  height: 10cm;
+  border-radius: 1em;
+  box-shadow: 0 0.188em 1.55em;
+  
+}
+
+
+.updateware  {
+  height: 21cm;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  background-image: url(/src/assets/images/pexels-nothing-ahead-4502492.jpg);
+
+}
+.updateware1{
+  margin-left: 11cm;
+  margin-top: 2cm;
+  background-color: white;
+  width: 18cm;
+  height: 12cm;
+  position: relative;
+  border-radius: 1em;
+  box-shadow: 0 0.188em 1.55em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+

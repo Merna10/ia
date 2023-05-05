@@ -1,0 +1,33 @@
+.userCard {
+    border-radius: 8px;
+    border: 1px solid #cccccc;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: rgb(235, 232, 232);
+    width: 8cm;
+    height: 7.5cm;
+    float: left;
+    margin: 0.5cm;
+    margin-bottom: 50px !important;
+}
+.supervCard {
+    border-radius: 20px;
+    
+    text-align: center;
+    box-sizing: border-box;
+    background-color: rgb(235, 232, 232);
+    width: 7cm;
+}
+.supervCard:hover {
+    transform: scale(1,1);
+    transform: all linear 200ms;
+    z-index: 1;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+}.userCard:hover {
+    transform: scale(1,1);
+    transform: all linear 200ms;
+    z-index: 1;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+}
+
+

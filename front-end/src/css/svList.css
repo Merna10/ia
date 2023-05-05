@@ -1,0 +1,16 @@
+.svlist {
+    height: 20cm;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    background-image: url(/src/assets/images/pexels-anete-lusina-5239740.jpg);
+
+  }
+  .svlistNav{
+    background-color: #020d09;
+    color: white;
+    font-size: large;
+    width: 50%;
+    height: 1.2cm;
+}

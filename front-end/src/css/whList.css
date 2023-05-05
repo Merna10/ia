@@ -1,0 +1,16 @@
+.whlist {
+    height: 20cm;
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    background-image: url(/src/assets/images/pexels-anete-lusina-4792285.jpg);
+
+  }
+  .whlistNav{
+    background-color: #020d09;
+    color: white;
+    font-size: large;
+    width: 50%;
+    height: 1.2cm;
+}

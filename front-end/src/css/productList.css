@@ -1,0 +1,28 @@
+.productList {
+    height: 20cm;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    background-image: url(/src/assets/images/pexels-shockphoto-by-szoka-sebastian-1381938.jpg);
+
+  }
+  .productNav{
+    background-color: #020d09;
+    
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+}
+
+  .productNavSv{
+    background-color: #111111;
+    
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}

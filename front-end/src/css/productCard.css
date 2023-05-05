@@ -1,0 +1,37 @@
+.productCard {
+    border-radius: 8px;
+    border: 1px solid #cccccc;
+    text-align: center;
+    box-sizing: border-box;
+    width: 12cm;
+    height: 16cm;
+    float: left;
+    margin: 0.5cm;
+    background-color: rgb(250, 249, 249);
+}
+
+.card-img-top{
+    height: 4cm;
+    width: 3cm;
+    margin-top: 1cm;
+    align-self: center;
+}
+
+
+.productCard:hover {
+    transform: scale(1,1);
+    transform: all linear 200ms;
+    z-index: 1;
+    box-shadow: 1px 1px 10px rgba(21, 21, 21, 0.3);
+}
+.productCardbtn{
+    background-color: #020d09;
+    color: white;
+    padding: 14px 20px;
+    margin-top: 0.5cm;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+}
+
+

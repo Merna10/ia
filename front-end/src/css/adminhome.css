@@ -1,0 +1,17 @@
+.admin  {
+    height: 19cm;
+    width: 100%;
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    background-image: url(/src/assets/images/pexels-evie-shaffer-2748756.jpg);
+
+  }
+.admintext{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 80px;
+    margin-left: 5cm;
+    font-family: "Arial Rounded MT Bold";
+  }

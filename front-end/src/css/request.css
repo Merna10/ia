@@ -1,0 +1,46 @@
+
+  .request
+  {
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    background-image: url(/src/assets/images/pexels-pixabay-221185.jpg);
+
+  }
+  .request1{
+    margin-left: 4cm;
+    margin-top: 2cm;
+    background-color: white;
+    width: 13cm;
+    height: 14cm;
+    position: relative;
+    border-radius: 1em;
+    box-shadow: 0 0.188em 1.55em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    
+  }
+
+
+  .requestbutton {
+    background-color: #020d09;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+  }
+  .backnav{
+    background-color: #020d09;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
