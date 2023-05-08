@@ -1,16 +1,34 @@
-.svlist {
-    height: 20cm;
+.userlist {
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-    align-items: center;
-    background-image: url(/src/assets/images/pexels-anete-lusina-5239740.jpg);
+    background-image: url(/src/assets/images/userlist.png);
 
   }
-  .svlistNav{
-    background-color: #020d09;
+  .svlist {
+    width: 100%;
+    height: 20cm;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(/src/assets/images/7096657.jpg);
+
+  }
+.abutton{
+  background-color: #2689f3;
     color: white;
+    padding: 14px 20px;
+    border-radius: 20px;
     font-size: large;
-    width: 50%;
-    height: 1.2cm;
+    margin-left: 0.5cm;
+    width: 20cm;
+}
+.assign{
+  background-color: #50a621;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 20px;
+    font-size: large;
+    
+    margin-left: 28cm;
+    width: 20cm;
 }

@@ -5,6 +5,7 @@ import "../../css/whList.css";
 import axios from 'axios'
 import Spinner from 'react-bootstrap/Spinner';
 
+import { AdminHeader } from "../../Pages/shared/header/admiHeader";
 export const WhList = () => {
 
   const [warehouses, setWarehouses] = useState({
@@ -30,17 +31,11 @@ export const WhList = () => {
     }, [])
 
     return (
-      <div>
-        <div className="whlist">
-          <ul >
-            <li >
-              <Link to={'/adminhome'} >Home</Link>
-            </li>
-
-            <li >
-              <Link to={'/addwh'} >Add Warehouse</Link>
-            </li>
-          </ul>
+      <div className="whlist">
+         <AdminHeader />
+      <br></br>
+      <Link className="warebutton" to={'/adminhistory'} >Stock Requested</Link>
+      <Link className="warebutton2" to={'/addwh'} >Add New Warehouse</Link>
         
         <div className="home-container p-5">
           {/* loader */}
@@ -51,14 +46,14 @@ export const WhList = () => {
               </Spinner>
             </div>
           )}
-        </div>
+        
 
 
         {warehouses.loading === false && warehouses.err == null && (
           <div className="row">
             {Array.isArray(warehouses.results) &&
               warehouses.results.map((warehouse) => (
-                <div className="col-3 card-product-container" key={warehouse.id}>
+                <div className="container-fluid" key={warehouse.id}>
 
                   <Warehouse
 
@@ -67,13 +62,14 @@ export const WhList = () => {
                     location={warehouse.location}
                     status={warehouse.status}
                   />
+                  <br></br>
                 </div>
 
               ))}
           </div>
         )}
 </div>
-      </div>
-
+      
+</div>
     );
 };

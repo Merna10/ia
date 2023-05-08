@@ -1,22 +1,32 @@
 .userCard {
     border-radius: 8px;
     border: 1px solid #cccccc;
-    text-align: center;
-    box-sizing: border-box;
-    background-color: rgb(235, 232, 232);
-    width: 8cm;
-    height: 7.5cm;
-    float: left;
-    margin: 0.5cm;
-    margin-bottom: 50px !important;
+    font-family: 'Times New Roman', Times, serif;
+    
+    font-size: large;
+    background-color:  #00000015;
+}
+.userdr {
+    border-radius: 8px;
+    text-align: right;
+    color: #263487;
 }
 .supervCard {
-    border-radius: 20px;
-    
-    text-align: center;
+    border-radius: 8px;
+    border: 1px solid #cccccc;
+    font-family: 'Times New Roman', Times, serif;
     box-sizing: border-box;
-    background-color: rgb(235, 232, 232);
-    width: 7cm;
+    background-color:  #00000015;
+    font-size: x-large;
+}
+.supervCardButton {
+    border-radius: 8px;
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+    margin-left: 20cm;
+    color: rgb(238, 77, 36);
+    
+    font-size: x-large;
 }
 .supervCard:hover {
     transform: scale(1,1);

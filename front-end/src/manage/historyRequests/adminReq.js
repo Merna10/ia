@@ -3,7 +3,8 @@ import { AdminHeader } from "../../Pages/shared/header/admiHeader";
 import { Link } from "react-router-dom";
 
 import Table from 'react-bootstrap/Table';
-
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
 
 import axios from 'axios'
 import Spinner from 'react-bootstrap/Spinner';
@@ -92,10 +93,10 @@ export const AdminHistorList = () => {
 
     <div className="">
       <AdminHeader/>
-      <Table striped bordered hover variant="dark">
+      <Table className="table">
         <thead>
           <tr>
-            <th>StockRequest ID</th>
+            <th>StockRequest </th>
             <th>User</th>
             <th>Product ID</th>
             <th>Product Name</th>
@@ -123,24 +124,28 @@ export const AdminHistorList = () => {
             requests.results.map(request => (
               <tr key={request.id}>
                 <td>{request.id}</td>
-                <td>{request.supervisor.user.email}</td>
                 <td>{request.product.id}</td>
                 <td>{request.product.name}</td>
                 <td>{request.quantity}</td>
                 <td>{request.status}</td>
                 <td>
-                  <Link
-                    className="btn btn-sm btn-success mx-2"
+                  
+                  
+                  <DropdownButton className="navbar" id="dropdown-basic-button" variant="" title="Bending" >
+      
+      <Dropdown.Item > <Link
+      style={{color:'black'}}
                     onClick={() => approveFun(request.id, request.product.id, request.quantity)}
                   >
                     Approve
-                  </Link>
-                  <Link
-                    className="btn btn-sm btn-danger mx-2"
+                  </Link></Dropdown.Item>
+      <Dropdown.Item > <Link
+      style={{color:'black'}}
                     onClick={() => deleteFun(request.id)}
                   >
                     Decline
-                  </Link>
+                  </Link></Dropdown.Item>
+    </DropdownButton>
                 </td>
               </tr>
             ))}

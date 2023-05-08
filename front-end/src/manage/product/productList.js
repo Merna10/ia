@@ -6,6 +6,7 @@ import axios from 'axios'
 import Spinner from 'react-bootstrap/Spinner';
 import Alert from 'react-bootstrap/Alert';
 import { useParams } from "react-router-dom";
+import { AdminHeader } from "../../Pages/shared/header/admiHeader";
 
 
 export const ProductList = () => {
@@ -38,14 +39,9 @@ export const ProductList = () => {
 
     <div>
       <div className="productList">
-        <ul>
-          <li>
-            <Link to={"/adminhome"}>Home</Link>
-          </li>
-          <li>
-            <Link to={"/addproduct/" + id }>Add Product</Link>
-          </li>
-        </ul>
+      <AdminHeader />
+      <br></br>
+      <Link className="addwarbutt" to={"/addproduct/" + id }>Add Product</Link>
       
       <div className="home-container p-5">
         {/* loader */}

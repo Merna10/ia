@@ -9,6 +9,10 @@
     background-image: url(/src/assets/images/pexels-pixabay-221185.jpg);
 
   }
+  .table{
+    width: 70%;
+    margin-left: 6cm;
+  }
   .request1{
     margin-left: 4cm;
     margin-top: 2cm;

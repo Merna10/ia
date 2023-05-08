@@ -6,8 +6,6 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
 import '../../css/register.css'
 import Alert from "react-bootstrap/Alert";
-
-
 import axios from "axios";
 import { getAuthUser } from "../../helper/Storage";
 import React, { useState } from "react";
@@ -61,10 +59,12 @@ export const AssignbSuberv = () => {
 
   
   return (
-    <><AdminHeader />
-      <div className='register'>
-        <br></br>
-        <div className='register1'>
+    <>
+    
+      <div className="assi">
+      <AdminHeader />
+      <br></br>
+        <div className="assign1">
 
         {supervisor.err && Array.isArray(supervisor.err) && supervisor.err.map((error, index) => (
               <Alert key={index} variant='danger' className='p-2'>
@@ -79,10 +79,9 @@ export const AssignbSuberv = () => {
             )}
 
           <Form onSubmit={AssignWarehouse}>
-            <Form.Label>Assign Subervisor</Form.Label>
             <Row className="mb-3">
               <Form.Group md="4" controlId="validationCustomUsername">
-                <Form.Label>ID</Form.Label>
+              <Form.Label>Subervisor ID</Form.Label>
                 <InputGroup hasValidation>
                   <Col>
                     <Form.Control
@@ -90,6 +89,7 @@ export const AssignbSuberv = () => {
                       value= {id}
                       placeholder= {id}
                       style={{ width: '15cm' }}
+                      className="registerIn"
                       aria-describedby="inputGroupPrepend"
                       disabled
                     />
@@ -109,13 +109,14 @@ export const AssignbSuberv = () => {
                       onChange={(e) => setSupervisor({ ...supervisor, warehouse_id: e.target.value })}
                       placeholder="Warehouse ID"
                       style={{ width: '      15cm' }}
+                      className="registerIn"
                       aria-describedby="inputGroupPrepend"
                       required
                     /></Col>
                 </InputGroup>
               </Form.Group>
             </Row>
-            <Button className="btn btn-sm btn-primary mx-2 " type="submit">Assign Warehouse</Button>
+            <Button className="assignButton" type="submit">Assign Warehouse</Button>
           </Form>
         </div></div>
     </>

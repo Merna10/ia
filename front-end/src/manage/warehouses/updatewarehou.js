@@ -1,3 +1,4 @@
+
 import { AdminHeader } from "../../Pages/shared/header/admiHeader";
 import React, { useState , useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
@@ -85,8 +86,9 @@ export const UpdateWarehous = () => {
 
 
   return (
-    <><AdminHeader/>
+    <>
     <div className='updateware'>
+    <AdminHeader />
       <br></br>
     <div className='updateware1'>
 
@@ -103,7 +105,6 @@ export const UpdateWarehous = () => {
             )}
 
     <Form onSubmit={updateWarehouse}>
-    <h1><Form.Label>Update Warehouse</Form.Label></h1>
   
       <Row className="mb-3">
         <Form.Group   md="4" controlId="validationCustomUsername">
@@ -160,8 +161,8 @@ export const UpdateWarehous = () => {
         </Form.Group>
       </Row>
       
-      <Button variant="dark" type="submit">
-                Update warehouse
+      <Button variant="primary" className='updatewarebutton' type="submit">
+                Submit
        </Button>   
           </Form>
     </div></div>

@@ -1,16 +1,18 @@
 .warehouseCard {
     border-radius: 8px;
     border: 1px solid #cccccc;
-    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
     box-sizing: border-box;
-    width: 7cm;
-    height: 7cm;
-    float: left;
-    background-color: #e1dddd;
-    margin: 0.5cm;
+    font-size: larger;
+    background-color:  #00000015;
+    
 }
 
-
+.wareHdr {
+    border-radius: 8px;
+    text-align: right;
+    color: #263487;
+}
 
 
 .warehouseCard:hover {

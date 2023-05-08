@@ -7,8 +7,8 @@ import { getAuthUser } from "../helper/Storage";
 import axios from "axios";
 import Alert from 'react-bootstrap/Alert';
 import { useParams } from "react-router-dom";
-
-
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
 export const User = (props) => {
  
   let { id } = useParams();
@@ -61,11 +61,18 @@ export const User = (props) => {
           </Alert>
         )}
       </>
-      
+     
       <Card className="userCard">
+      <DropdownButton className="userdr" variant="" >
+      <Dropdown.Item ><Link  to={'/assign/'+ props.id}>Assign</Link></Dropdown.Item>
+      <Dropdown.Item ><Link  to={'/updateUser/'+ props.id }>Update</Link></Dropdown.Item>
+      <Dropdown.Item > <Link to={'/userList'} onClick={(e) => { DeleteFun(props.id) }} >Delete</Link></Dropdown.Item>
+    </DropdownButton>
+    
         <Card.Body>
-          <Card.Title>User ID: {props.id}</Card.Title>
-          <Card.Subtitle className="mb-2 text-muted">Email: {props.email}</Card.Subtitle>
+          <Card.Title>ID: {props.id}</Card.Title>
+          
+          <Card.Text >Email: {props.email}</Card.Text>
           <Card.Text>
             Phone: {props.phone}
           </Card.Text>
@@ -75,10 +82,7 @@ export const User = (props) => {
           <Card.Text>
             Type: {props.type}
           </Card.Text>
-          <Link className="btn btn-sm btn-primary mx-2 " to={'/assign/'+ props.id}>Assign</Link>
-          <Link className="btn btn-sm btn-warning mx-2 " to={'/updateUser/'+ props.id }>Update</Link>
-          <Link className="btn btn-sm btn-danger mx-2" to={'/userList'} onClick={(e) => { DeleteFun(props.id) }} >Delete</Link>
-        </Card.Body>
+          </Card.Body>
       </Card>
     </div> 
   );

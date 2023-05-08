@@ -1,17 +1,16 @@
-import { AdminHeader } from "../../Pages/shared/header/admiHeader";
+
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
 import'../../css/addProduct.css'
-
 import Form from "react-bootstrap/Form";
 import Alert from "react-bootstrap/Alert";
 import { getAuthUser } from "../../helper/Storage";
 import axios from "axios";
 import React, { useRef, useState } from "react";
 import { useParams } from "react-router-dom";
-
+import { AdminHeader } from "../../Pages/shared/header/admiHeader";
 
 export const AddProduct = (props) => {
   
@@ -78,8 +77,9 @@ export const AddProduct = (props) => {
 
 
   return (
-    <><AdminHeader/>
+    <>
     <div className='addpro'>
+    <AdminHeader />
       <br></br>
     <div className='addpro1'>
 
@@ -98,7 +98,6 @@ export const AddProduct = (props) => {
       </>
       
     <Form onSubmit={createProduct} >
-    <Form.Label>Add Product</Form.Label>
       
       <Row className="mb-3">
         <Form.Group   md="4" controlId="validationCustomUsername">
@@ -188,8 +187,8 @@ export const AddProduct = (props) => {
           </InputGroup>
         </Form.Group>
       </Row>
-      <Button className="btn btn-dark w-100" variant="primary" type="submit">
-          Add New product
+      <Button className="addproBu"  variant="primary" type="submit">
+          Submit
         </Button>
     </Form>
     </div></div>

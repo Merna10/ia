@@ -1,7 +1,8 @@
-import { AdminHeader } from "../../Pages/shared/header/admiHeader";
+import {  Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
+import { AdminHeader } from "../../Pages/shared/header/admiHeader";
 import Form from "react-bootstrap/Form";
 import Alert from "react-bootstrap/Alert";
 import axios from "axios";
@@ -89,12 +90,13 @@ export const UpdateUser = () => {
   }, [user.reload]);
 
   return (
-    <><AdminHeader />
-      <div className='updateSv'>
-        <br></br>
-        <div className='updateSv1'>
+    <>
+      <div className='updateuser'>
+      <AdminHeader />
+      <br></br>
+        <div className='updateuser1'>
           <div className="login-container w-75 ">
-            <h1>Update User Form</h1>
+            <h1>Update Info</h1>
 
             {user.err && Array.isArray(user.err) && user.err.map((error, index) => (
               <Alert key={index} variant='danger' className='p-2'>
@@ -116,6 +118,7 @@ export const UpdateUser = () => {
                   type="email"
                   onChange={(e) => setUser({ ...user, email: e.target.value })}
                   required
+                  className="registerIn"
                   style={{width:'  15cm'}}
                   placeholder="Email"
                 />
@@ -127,6 +130,7 @@ export const UpdateUser = () => {
                   type="password"
                   onChange={(e) => setUser({ ...user, password: e.target.value })}
                   required
+                  className="registerIn"
                   style={{width:'  15cm'}}
                   maxLength="16" 
                   minLength="8"
@@ -140,6 +144,7 @@ export const UpdateUser = () => {
                   onChange={(e) => setUser({ ...user, phone: e.target.value })}
                   maxLength="11" 
                   minLength="11"
+                  className="registerIn"
                   style={{width:'  15cm'}}
                   type="phone"
                   required
@@ -153,6 +158,7 @@ export const UpdateUser = () => {
                   onChange={(e) => setUser({ ...user, status: e.target.value })}
                   style={{width:'  15cm'}}
                   type="text"
+                  className="registerIn"
                   required
                   placeholder="status"
                 />
@@ -163,12 +169,13 @@ export const UpdateUser = () => {
                   onChange={(e) => setUser({ ...user, type: e.target.value })}
                   style={{width:'  15cm'}}
                   type="text"
+                  className="registerIn"
                   placeholder="type"
                 />
               </Form.Group>
 
-              <Button  variant="dark" type="submit">
-                Update user
+              <Button  className="registerIn" variant="dark" type="submit">
+                Submit
               </Button>
             </Form>
           </div>

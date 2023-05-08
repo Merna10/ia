@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Supervisor } from "../../componants/supervCard";
-import {  Link } from "react-router-dom";
+
+import { AdminHeader } from "../../Pages/shared/header/admiHeader";
 import "../../css/svList.css";
 import axios from 'axios'
 import Spinner from 'react-bootstrap/Spinner';
-import Alert from 'react-bootstrap/Alert';
+import Button from 'react-bootstrap/Button';
 
 export const SvList = () => {
 
@@ -35,12 +36,8 @@ export const SvList = () => {
     
     <div className="svlist">
       
-      <ul >
-          <li >
-              <Link to={'/adminhome'} >Home</Link>
-            </li>
-
-            </ul>
+      <AdminHeader />
+      <br></br>
             <div className="home-container p-5">
              {/* loader */}
         {supervisors.loading === true && (
@@ -55,7 +52,7 @@ export const SvList = () => {
           <div className="row">
             {Array.isArray(supervisors.results) &&
               supervisors.results.map((supervisor) => (
-                <div className="col-3 card-users-container" key={supervisor.id}>
+                <div className="container-fluid" key={supervisor.id}>
 
                   <Supervisor
 
@@ -63,6 +60,7 @@ export const SvList = () => {
                     user={supervisor.user_id}
                     warehouse={supervisor.warehouse_id}
                   />
+                  <br></br>
                 </div>
 
               ))}

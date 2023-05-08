@@ -1,16 +1,16 @@
-import { AdminHeader } from "../../Pages/shared/header/admiHeader";
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
 import'../../css/addProduct.css'
-
+import { Link } from "react-router-dom";
 import React, { useState, useRef, useEffect } from "react";
 import Alert from "react-bootstrap/Alert";
 import { getAuthUser } from "../../helper/Storage";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import { AdminHeader } from "../../Pages/shared/header/admiHeader";
 
 
 export const UpdateProduct = () => {
@@ -103,8 +103,9 @@ export const UpdateProduct = () => {
 
 
   return (
-    <><AdminHeader/>
+    <>
     <div className='updatepro'>
+    <AdminHeader />
       <br></br>
     <div className='updatepro1'>
       
@@ -122,22 +123,8 @@ export const UpdateProduct = () => {
 
 
     <Form onSubmit={updateProduct}>
-    <Form.Label>Update Product</Form.Label>
     
-    <Row className="mb-3">
-    <img
-          alt={product.name}
-          style={{
-            width: "50%",
-            height: "100px",
-            objectFit: "cover",
-            borderRadius: "10px",
-            border: "1px solid #ddd",
-            marginBottom: "10px",
-          }}
-          src={product.photo}
-        />
-    </Row>
+    
         
       <Row className="mb-3">
         <Form.Group   md="4" controlId="validationCustomUsername">
@@ -223,7 +210,7 @@ export const UpdateProduct = () => {
           </InputGroup>
         </Form.Group>
       </Row>
-      <Button className="btn btn-dark w-100" variant="primary" type="submit">
+      <Button className="updateprobutton" variant="primary" type="submit">
           Update product
         </Button>   
          </Form>

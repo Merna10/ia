@@ -63,18 +63,11 @@ export const Supervisor = (props) => {
     <Card className="supervCard">
     <Card.Body>
         <Card.Text>
-        Subervisor with
+        Subervisor with ID: {props.user} Assigned to Warehouse with ID: {props.warehouse}
+        <Link className="supervCardButton"  onClick={(e) => { DeleteFun(props.id) }} to={'/whList'}>Delete </Link>
+
         </Card.Text>
-        <Card.Text>
-        ID: {props.user}
-        </Card.Text>
-        <Card.Text>
-        Assigned to Warehouse
-        </Card.Text>
-        <Card.Text>
-        with ID: {props.warehouse}
-        </Card.Text>
-        <Link className="btn btn-sm btn-danger mx-2"  onClick={(e) => { DeleteFun(props.id) }} to={'/whList'}>Delete </Link>
+        
       </Card.Body>
     </Card>
     </div> 

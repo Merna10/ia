@@ -1,56 +1,54 @@
 
 
   .addpro  {
-    height: 19cm;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    align-items: center;
-    background-image: url(/src/assets/images/shop.png);
+    height: 20cm;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+    background-image: url(/src/assets/images/4393.jpg);
 
   }
   .addpro1{
-    margin-top: 0cm;
-    margin-left: 1cm;
-    align-content: center;
+    margin-left: 12.3cm;
+  margin-top: 3.5cm;
     font-size: large;
-    text-align: center;
-    background-color: white;
-    width: 15cm;
-    height: 17cm;
-    border-radius: 1em;
-    box-shadow: 0 0.188em 1.55em;
+    font-weight: bold;
+   
     
   }
 
  
   .updatepro  {
     
-    height: 21cm;
+    height: 20cm;
     width: 100%;
-    display: flex;
     background-repeat: no-repeat;
     background-size: cover;
     align-items: center;
-    background-image: url(/src/assets/images/pexels-nothing-ahead-4502492.jpg);
+    background-image: url(/src/assets/images/upprod.png);
 
   }
   .updatepro1{
-    margin-left: 11cm;
-    margin-bottom: 2cm;
-    background-color: white;
-    font-size: large;
-    width: 18cm;
-    height: 17cm;
-    position: relative;
-    border-radius: 1em;
-    box-shadow: 0 0.188em 1.55em;
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+    margin-left: 2cm;
+    margin-top: 1cm;
+      font-size: large;
+      font-weight: bold;
+      color: white;
     
   }
-
+  .addproBu{
+    margin-left: 6cm;
+      text-align: center;
+      font-size: large;
+      border: none;
+  }
+  .updateprobutton{
+    border-radius: 8px ;
+    box-sizing: border-box;
+    background-color: rgb(75, 75, 218);
+      text-align: center;
+      color: white;
+      border: none;
+  }
   

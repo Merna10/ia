@@ -12,10 +12,8 @@ import { Admin } from "./middlewares/Admin";
 import { Supervisor5 } from "./middlewares/supervisor";
 import { AddProduct } from "./manage/product/addProduct";
 import { UpdateProduct } from "./manage/product/updateProduct";
-import { AddSuberv } from "./manage/supervisors/addSv";
 import { AddUser } from "./manage/users/addUser";
 import { AssignbSuberv } from "./manage/users/assignWare";
-import { UpdateSuber } from "./manage/supervisors/updateSv";
 import { UpdateUser } from "./manage/users/updateUser";
 import { WhList } from "./manage/warehouses/whList";
 import { SvList } from "./manage/supervisors/svList";
@@ -85,20 +83,12 @@ export const routes = createBrowserRouter([
             element: <UpdateUser />,
           },
           {
-            path: "/addsv",
-            element: <AddSuberv />,
-          },
-          {
             path: "/assign/:id",
             element: <AssignbSuberv />,
           },
           {
             path: "/svList",
             element: <SvList />,
-          },
-          {
-            path: "/updatesv/:id",
-            element: <UpdateSuber />,
           },
           {
             path: "/addProduct/:id",

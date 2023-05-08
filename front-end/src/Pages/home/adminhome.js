@@ -5,12 +5,7 @@ export const AdminHome = () => {
 return(
     <><AdminHeader />
     <div className='admin'>
-    <div className='admintext'>
-
-            <h2>Welcome</h2>
-           
-            
-</div>
+    
 </div>
 </>
 );

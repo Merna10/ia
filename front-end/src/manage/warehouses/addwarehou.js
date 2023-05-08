@@ -1,15 +1,15 @@
-import { AdminHeader } from "../../Pages/shared/header/admiHeader";
-import Button from 'react-bootstrap/Button';
+
 import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import'../../css/addwarehou.css'
-
+import Button from 'react-bootstrap/Button';
 import Form from "react-bootstrap/Form";
 import Alert from "react-bootstrap/Alert";
 import { getAuthUser } from "../../helper/Storage";
 import axios from "axios";
-import React, { useRef, useState } from "react";
+import React, {useState } from "react";
+import { AdminHeader } from "../../Pages/shared/header/admiHeader";
 
 export const AddWarehouse = () => {
 
@@ -59,9 +59,11 @@ export const AddWarehouse = () => {
 
 
   return (
-    <><AdminHeader/>
+    <>
     <div className='addware'>
+    <AdminHeader />
       <br></br>
+      
     <div className='addware1'>
     <>
     {warehouse.err && Array.isArray(warehouse.err) && warehouse.err.map((error, index) => (
@@ -78,7 +80,6 @@ export const AddWarehouse = () => {
       </>
 
     <Form onSubmit={createWarehouse}>
-    <h1><Form.Label>Add Warehouse</Form.Label></h1>
   
       <Row className="mb-3">
         <Form.Group   md="4" controlId="validationCustomUsername">
@@ -92,6 +93,7 @@ export const AddWarehouse = () => {
               style={{width:'  15cm'}}
               aria-describedby="inputGroupPrepend"
               required
+              className="registerIn"
             /></Col>
           </InputGroup>
         </Form.Group>
@@ -109,6 +111,7 @@ export const AddWarehouse = () => {
               style={{width:' 15cm'}}
               aria-describedby="inputGroupPrepend"
               required
+              className="registerIn"
             /></Col>
           </InputGroup>
         </Form.Group>
@@ -127,11 +130,12 @@ export const AddWarehouse = () => {
               style={{width:'      15cm'}}
               aria-describedby="inputGroupPrepend"
               required
+              className="registerIn"
             /></Col>
           </InputGroup>
         </Form.Group>
       </Row>
-      <Button  variant="dark" type="submit">
+      <Button  variant="primary" type="submit">
           Submit
         </Button>    
           </Form>

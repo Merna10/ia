@@ -4,7 +4,7 @@ import {  Link } from "react-router-dom";
 import "../../css/svList.css";
 import axios from 'axios'
 import Spinner from 'react-bootstrap/Spinner';
-import Alert from 'react-bootstrap/Alert';
+import { AdminHeader } from "../../Pages/shared/header/admiHeader";
 
 export const UserList = () => {
 
@@ -32,18 +32,16 @@ export const UserList = () => {
 
 
   return (
-    <div className="svlist">
+    <div className="userlist">
       
-      <ul >
-          <li >
-              <Link to={'/adminhome'} >Home</Link>
-            </li>
+      <AdminHeader />
+      <br></br>
+      <Link className="assign" to={'/svlist'} >Assigned</Link>
+      <Link className="abutton" to={'/addUser'} >Add New User</Link>
 
-            <li >
-              <Link to={'/addUser'} >Add User</Link>
-            </li>
-            </ul>
-            <div className="home-container p-5">
+
+      
+         <div className="home-container p-5">
              {/* loader */}
         {users.loading === true && (
           <div className="text-center">
@@ -57,7 +55,7 @@ export const UserList = () => {
           <div className="row">
             {Array.isArray(users.results) &&
               users.results.map((user) => (
-                <div className="col-3 card-users-container" key={user.id}>
+                <div className="container-fluid" key={user.id}>
 
                   <User
 
@@ -66,7 +64,9 @@ export const UserList = () => {
                     phone={user.phone}
                     status={user.status}
                     type={user.type}
+
                   />
+                  <br></br>
                 </div>
 
               ))}

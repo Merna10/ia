@@ -1,48 +1,66 @@
 
 .register
 {
-  height: 22cm;
-  width: 100%;
+  margin: 10px;
+  height: 15cm;
   background-repeat: no-repeat;
   align-items: center;
-  background-size: cover;
-  background-image: url(/src/assets/images/pexels-dominika-roseclay-1036841.jpg);
-
+  background-image: url(/src/assets/images/add-user.png);
 }
 .register1{
+ 
+  margin-left: 15cm;
   margin-top: 2cm;
-  margin-left: 20cm;
-    align-content: center;
-    font-size: large;
-    text-align: center;
-    width: 15cm;
     
-    background-color: white;
-    border-radius: 1em;
-    box-shadow: 0 0.188em 1.55em;
+    font-size: large;
+    font-weight: bold;
   
 }
-
-.updateSv  {
-  height: 21cm;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  align-items: center;
-  background-image: url(/src/assets/images/pexels-nothing-ahead-4502492.jpg);
-
-}
-.updateSv1{
-  margin-top: 2cm;
-  margin-left: 11cm;
-  background-color: white;
-  width: 18cm;
-  height: 12cm;
+.registerIn{
   border-radius: 1em;
-  box-shadow: 0 0.188em 1.55em;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  text-align: center;
+  
+}
+.assi{
+  background-image: url(/src/assets/images/assign.png);
+  
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30cm;
+}
+.assign1{
+ margin-top: 5cm;
+margin-left: 5cm;
+    
+    font-size: large;
+    font-weight: bold;
+  
+}
+.assignButton {
+  border-radius: 8px ;
+  font-family: 'Times New Roman', Times, serif;
+  box-sizing: border-box;
+  border: none;
+  color: aliceblue;
+  background-color: #50a621;
 }
 
+.updateuser
+{
+  margin: 10px;
+  height: 20cm;
+  background-repeat: no-repeat;
+  align-items: center;
+  background-image: url(/src/assets/images/updateUser.png);
+}.updateuser1
+{
+  font-size: large;
+    font-weight: bold;
+}
+.updateUsButton {
+  border-radius: 8px ;
+  font-family: 'Times New Roman', Times, serif;
+  box-sizing: border-box;
+  border: none;
+  background-color: rgb(107, 120, 132);
+  color: aliceblue;
+}

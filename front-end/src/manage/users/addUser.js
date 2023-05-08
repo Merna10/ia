@@ -4,7 +4,8 @@ import Form from "react-bootstrap/Form";
 import Alert from "react-bootstrap/Alert";
 import { getAuthUser } from "../../helper/Storage";
 import axios from "axios";
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
+import Col from 'react-bootstrap/Col';
 
 import'../../css/register.css'
 
@@ -62,15 +63,12 @@ export const AddUser = () => {
   }
 
   return (
-    <><AdminHeader/>
-    <div className='register'>
+    <>
+    <AdminHeader />
       <br></br>
-    <div className='register1'>
-      
-
+    <div className='register'>
     
-      <h1>Add User</h1>
-
+    <div className="register1">
       <>
       {user.err && Array.isArray(user.err) && user.err.map((error, index) => (
               <Alert key={index} variant='danger' className='p-2'>
@@ -92,6 +90,7 @@ export const AddUser = () => {
             onChange={(e) => setUser({ ...user, email: e.target.value })}
             required
             style={{width:'  15cm'}}
+            className="registerIn"
             placeholder="Email"
           />
         </Form.Group>
@@ -102,6 +101,7 @@ export const AddUser = () => {
             onChange={(e) => setUser({ ...user, password: e.target.value })}
             type="password"
             required
+            className="registerIn"
             style={{width:'  15cm'}}
             placeholder="password"
           />
@@ -113,6 +113,7 @@ export const AddUser = () => {
             onChange={(e) => setUser({ ...user, phone: e.target.value })}
             style={{width:'  15cm'}}
             type="phone"
+            className="registerIn"
             required
             placeholder="phone"
           />
@@ -123,6 +124,7 @@ export const AddUser = () => {
             onChange={(e) => setUser({ ...user, status: e.target.value })}
             style={{width:'  15cm'}}
             type="text"
+            className="registerIn"
             required
             placeholder="status"
           />
@@ -130,6 +132,7 @@ export const AddUser = () => {
         <Form.Group className="mb-3">
         <Form.Control
             value={user.type}
+            className="registerIn"
             onChange={(e) => setUser({ ...user, type: e.target.value })}
             style={{width:'  15cm'}}
             type="text"
@@ -137,9 +140,13 @@ export const AddUser = () => {
           />
         </Form.Group>
 
-        <Button variant="dark"  type="submit">
-          Add New User
+       
+        <Col  sm={{ span: 10, offset: 2 }}>
+        <Button size='lg' variant="primary"  type="submit">
+          Submit
         </Button>
+        
+        </Col>
       </Form>
     
     </div></div> 

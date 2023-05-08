@@ -1,4 +1,5 @@
 import "../css/warehouseCard.css";
+import "../css/supervCard.css";
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import { MdLocationPin,MdOutlinePermIdentity } from 'react-icons/md';
@@ -7,6 +8,8 @@ import { getAuthUser } from "../helper/Storage";
 import axios from "axios";
 import Alert from 'react-bootstrap/Alert';
 import { useParams } from "react-router-dom";
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
 
 export const Warehouse = (props) => {
 
@@ -47,7 +50,7 @@ export const Warehouse = (props) => {
 
   return (
     <div>
-       <Card className="warehouseCard">
+       
 
        <>
         {warehouse.err.map((error, index) => (
@@ -62,20 +65,23 @@ export const Warehouse = (props) => {
           </Alert>
         )}
       </>
-
+      
+      <Card className="warehouseCard">
+      <DropdownButton className="wareHdr" variant="" >
+      <Dropdown.Item ><Link to={'/productList/'+ props.id }>View </Link></Dropdown.Item>
+      <Dropdown.Item ><Link  to={'/updatewh/'+ props.id }>Update </Link></Dropdown.Item>
+      <Dropdown.Item ><Link onClick={(e) => { DeleteFun(props.id) }} to={'/whList'}>Delete </Link></Dropdown.Item>
+    </DropdownButton>
       <Card.Body>
         <Card.Title><MdOutlinePermIdentity/>{props.name}</Card.Title>
-        <Card.Subtitle className="mb-2 text-muted">ID: {props.id}</Card.Subtitle>
+        <Card.Text >ID: {props.id}</Card.Text>
         <Card.Text>
           Status: {props.status}
         </Card.Text>
         <Card.Text><MdLocationPin/>
           Location: {props.location}
         </Card.Text>
-        <Link className="btn btn-sm btn-primary mx-2" to={'/productList/'+ props.id }>View </Link>
-        <Link className="btn btn-sm btn-warning mx-2" to={'/updatewh/'+ props.id }>Update </Link>
-        <Link className="btn btn-sm btn-danger mx-2"  onClick={(e) => { DeleteFun(props.id) }} to={'/whList'}>Delete </Link>
-      </Card.Body>
+        </Card.Body>
     </Card>
     </div>
     

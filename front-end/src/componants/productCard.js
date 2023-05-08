@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
 import { getAuthUser } from "../helper/Storage";
 import axios from "axios";
 import Alert from 'react-bootstrap/Alert';
@@ -51,7 +53,10 @@ export const Product = (props) => {
   return (
     
       <Card className="productCard">
-
+<DropdownButton className="userdr" variant="" >
+      <Dropdown.Item ><Link to={'/updateproduct/'+ props.id }>Update </Link></Dropdown.Item>
+      <Dropdown.Item > <Link onClick={(e) => { DeleteFun(props.id) }} >Delete </Link></Dropdown.Item>
+    </DropdownButton>
       <>
         {product.err.map((error, index) => (
           <Alert key={index} variant='danger' className='p-2'>
@@ -72,13 +77,10 @@ export const Product = (props) => {
           <Card.Text>
             {props.description}
           </Card.Text>
-          <ListGroup className="list-group-flush">
-          <ListGroup.Item key={`product-${props.id}-id`}>ID: {props.id}</ListGroup.Item>
-          <ListGroup.Item key={`product-${props.id}-stock`}>Quantity: {props.stock}</ListGroup.Item>
-          <ListGroup.Item key={`product-${props.id}-warehouse`}>Warehouse id: {props.warehouse_id}</ListGroup.Item>
-        </ListGroup>
-        <Link className="btn btn-sm btn-warning mx-2" to={'/updateproduct/'+ props.id }>Update </Link>
-        <Link className="btn btn-sm btn-danger mx-2"  onClick={(e) => { DeleteFun(props.id) }} >Delete </Link>
+          <Card.Text>
+          Quantity: {props.stock}
+          </Card.Text>
+        
         </Card.Body>
       </Card>
     
