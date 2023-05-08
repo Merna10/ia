@@ -39,7 +39,7 @@ export const SvHistorList = () => {
   return (
     <div className="">
       <SvHeader />
-      <Table striped bordered hover variant="dark">
+      <Table >
         <thead>
           <tr>
             <th style={{ width: '7cm' }}>StockRequest ID</th>

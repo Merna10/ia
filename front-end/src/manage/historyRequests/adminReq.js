@@ -131,7 +131,7 @@ export const AdminHistorList = () => {
                 <td>
                   
                   
-                  <DropdownButton className="navbar" id="dropdown-basic-button" variant="" title="Bending" >
+                  <DropdownButton className="navbar" id="dropdown-basic-button" variant="" title="Status" >
       
       <Dropdown.Item > <Link
       style={{color:'black'}}
