@@ -4,6 +4,8 @@ import '../../../css/superVheader.css'
 import { getAuthUser } from "../../../helper/Storage";
 import React, { useEffect, useState } from "react";
 import axios from 'axios'
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
 
 
 export const SvHeader = () => {
@@ -41,21 +43,11 @@ export const SvHeader = () => {
     <>
       <nav >
         <div >
-
-          <ul >
-          <li >
-              <Link to={'/svhome'} >Home</Link>
-            </li>
-            <li >
-              <Link to={'/SvProductList/'+ supervisor.results.id} >Products</Link>
-            </li>
-            <li >
-              <Link to={'/supervisorHistory/' + supervisor.results.id}>Requests</Link>
-            </li>
-            <li className="nav-item2" >
-            <Link to={'/'} >LogOut</Link>
-            </li>
-          </ul>
+          <DropdownButton className="navbar" id="dropdown-basic-button" variant="" title="Menu" >
+      <Dropdown.Item ><Link to={'/svhome'} >Home</Link></Dropdown.Item>
+      <Dropdown.Item > <Link to={'/SvProductList/'+ supervisor.results.id} >Products</Link></Dropdown.Item>
+      <Dropdown.Item > <Link to={'/'} >LogOut</Link></Dropdown.Item>
+    </DropdownButton>
         </div>
       </nav>
     </>

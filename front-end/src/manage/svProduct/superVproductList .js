@@ -7,6 +7,7 @@ import Alert from 'react-bootstrap/Alert';
 import { useParams } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import { getAuthUser } from "../../helper/Storage";
+import { SvHeader } from "../../Pages/shared/header/superVheader";
 
 export const SvProductList = () => {
   const auth = getAuthUser();
@@ -14,6 +15,12 @@ export const SvProductList = () => {
   let { id } = useParams();
 
   const [products, setProducts] = useState({
+    loading: true,
+    results: [],
+    err: null,
+    reload: 0
+  });
+  const [supervisor, setSupervisor] = useState({
     loading: true,
     results: [],
     err: null,
@@ -37,16 +44,31 @@ export const SvProductList = () => {
 
       })
   }, [])
+  useEffect(() => {
+    setSupervisor({ ...supervisor, loading: true })
+
+    axios
+      .get('http://localhost:5000/superviser/User/'+ auth.id,{
+        header:{
+          token: auth.token
+        }
+      })
+      .then(resp => {
+        console.log(resp);
+        setSupervisor({ ...supervisor, results: resp.data.supervisor, loading: false })
+      })
+      .catch(err => {
+        setSupervisor({ ...supervisor, err: "Something went wrong", loading: false })
+
+      })
+  }, [])
 
   return (
     <div>
     <div className="productList">
-      <ul >
-          <li >
-              <Link to={'/svhome'} >Back</Link>
-            </li>
-            </ul>
-
+    <SvHeader />
+    <br></br>
+    <Link className="req" to={'/supervisorHistory/' + supervisor.results.id}>Requests</Link>
     <div className="home-container p-5">
        {/* loader */}
        {products.loading === true && (

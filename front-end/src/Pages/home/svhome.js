@@ -6,12 +6,7 @@ export const SvHome = () => {
 return(
     <><SvHeader />
     <div className='superv'>
-    <div className='supervtext'>
-
- <h1>Welcome</h1>
-           
-            
-</div>
+    
 </div>
 </>
 );

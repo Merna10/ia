@@ -27,7 +27,7 @@ export const SvProduct = (props) => {
   return (
 
     <div>
-    <Card>
+    <Card className="productCard">
 
     <>
       {product.err.map((error, index) => (
@@ -45,16 +45,14 @@ export const SvProduct = (props) => {
 
       <Card.Img className="card-image" variant="top" src={props.photo} />
       <Card.Body>
-        <Card.Title>{props.name}</Card.Title>
-        <Card.Text>
-          {props.description}
-        </Card.Text>
-        <ListGroup className="list-group-flush">
-        <ListGroup.Item key={`product-${props.id}-id`}>ID: {props.id}</ListGroup.Item>
-        <ListGroup.Item key={`product-${props.id}-stock`}>Quantity: {props.stock}</ListGroup.Item>
-        <ListGroup.Item key={`product-${props.id}-warehouse`}>Warehouse id: {props.warehouse_id}</ListGroup.Item>
-      </ListGroup>
-      <Link className="btn btn-sm btn-primary mx-2" to={'/request/'+ props.id + '/' + props.supervisor_id }>Stock Request</Link>
+          <Card.Title>{props.name}</Card.Title>
+          <Card.Text>
+            {props.description}
+          </Card.Text>
+          <Card.Text>
+          Quantity: {props.stock}
+          </Card.Text>
+      <Link className="btn  btn-primary mx-2" to={'/request/'+ props.id + '/' + props.supervisor_id }>Stock Request</Link>
       </Card.Body>
     </Card>
   </div>

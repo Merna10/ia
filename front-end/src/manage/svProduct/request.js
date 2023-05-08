@@ -81,45 +81,10 @@ export const Request = () => {
             )}
       
     <Form onSubmit={createReqeust}>
-    <Form.Label>Update Product</Form.Label>
-      
       
       <Row className="mb-3">
         <Form.Group   md="4" controlId="validationCustomUsername">
-          <Form.Label>Product ID</Form.Label>
-          <InputGroup hasValidation>
-            <Col >
-            <Form.Control
-              type="Number"
-              value={product_id}
-              placeholder={product_id}
-              style={{width:'12cm'}}
-              aria-describedby="inputGroupPrepend"
-              disabled
-            /></Col>
-          </InputGroup>
-        </Form.Group>
-      </Row>
-      <Row className="mb-3">
-        <Form.Group   md="4" controlId="validationCustomUsername">
-          <Form.Label>Supervisor ID</Form.Label>
-          <InputGroup hasValidation>
-            <Col >
-            <Form.Control
-              type="Number"
-              value={supervisor_id}
-              placeholder={supervisor_id}
-              style={{width:'      12cm'}}
-              aria-describedby="inputGroupPrepend"
-              disabled
-            /></Col>
-          </InputGroup>
-        </Form.Group>
-      </Row>
-      
-      <Row className="mb-3">
-        <Form.Group   md="4" controlId="validationCustomUsername">
-          <Form.Label>Change Stock To</Form.Label>
+          <Form.Label>Request To Change Stock</Form.Label>
           <InputGroup hasValidation>
             <Col >
             <Form.Control
@@ -134,7 +99,7 @@ export const Request = () => {
           </InputGroup>
         </Form.Group>
       </Row>
-      <Button className="btn btn-sm btn-primary mx-2 " type="submit">Create Reqeust</Button>
+      <Button className="btn btn-sm btn-primary mx-2 " type="submit">Send</Button>
     </Form>
     </div></div>
     </>

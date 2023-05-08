@@ -1,7 +1,6 @@
 import { SupervisorRequest } from "../../componants/supervhistoryrequest";
 import {SvHeader} from "../../Pages/shared/header/superVheader";
 import Table from 'react-bootstrap/Table';
-
 import axios from 'axios'
 import Spinner from 'react-bootstrap/Spinner';
 import Alert from 'react-bootstrap/Alert';
